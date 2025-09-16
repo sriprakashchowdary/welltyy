@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wellsty - Coming Soon</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="hero-gradient">
+    <div class="bg-pattern"></div>
+    <div class="container">
+      
+      <!-- Header -->
+      <header>
+        <h2 class="font-brand">Wellsty</h2>
+        <h1 class="font-display">A New Era of Style is Coming.</h1>
+        <p>We are crafting a collection that redefines elegance and empowers self-expression. The wait is almost over.</p>
+      </header>
+
+      <!-- Main Content -->
+      <main>
+        <!-- Email Subscription Form -->
+        <form id="subscribe-form" class="email-form">
+          <input id="email-input" type="email" class="email-input" placeholder="Enter your email" required>
+          <button type="submit" class="notify-button">Notify Me</button>
+        </form>
+
+        <!-- Gallery -->
+        <section class="gallery">
+          <h2>Get a Glimpse</h2>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="https://horizons-cdn.hostinger.com/21becedd-c12d-4145-b803-9c37c842543b/i2-Su2cb.jpg" alt="Chic urban fashion">
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1658315125727-491deec051f5" alt="Luxurious fabric detail">
+            </div>
+            <div class="gallery-item">
+              <img src="https://horizons-cdn.hostinger.com/21becedd-c12d-4145-b803-9c37c842543b/i1-MYZcL.jpg" alt="Modern tailored suit">
+            </div>
+            <div class="gallery-item">
+              <img src="https://horizons-cdn.hostinger.com/21becedd-c12d-4145-b803-9c37c842543b/i3-y9UyT.jpg" alt="Artistic clothing silhouettes">
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <section class="socials">
+          <p>Follow Our Journey</p>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/wellsty.in?igsh=N292bmFvOTZsMXN3&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=61580731476595&mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://x.com/wellsty1236?s=21" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
+          </div>
+        </section>
+      </footer>
+
+    </div>
+  </div>
+  
+  <!-- Notification Popup -->
+  <div id="notification-popup" class="notification"></div>
+
+  <!-- JavaScript -->
+  <script>
+    const subscribeForm = document.getElementById('subscribe-form');
+    const emailInput = document.getElementById('email-input');
+    const notificationPopup = document.getElementById('notification-popup');
+
+    function showNotification(message, isError = false) {
+      notificationPopup.textContent = message;
+      notificationPopup.classList.remove('error');
+      if (isError) {
+        notificationPopup.classList.add('error');
+      }
+      notificationPopup.classList.add('show');
+
+      setTimeout(() => {
+        notificationPopup.classList.remove('show');
+      }, 3000);
+    }
+
+    subscribeForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const email = emailInput.value;
+
+      if (email && /^\S+@\S+\.\S+$/.test(email)) {
+        showNotification('Thank you! You are on the list.');
+        emailInput.value = '';
+      } else {
+        showNotification('Please enter a valid email address.', true);
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+
