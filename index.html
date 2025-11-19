@@ -1,110 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wellsty - Coming Soon</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
-
-  <!-- External CSS -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopsBuzz - Elevate Your Lifestyle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    
 </head>
 <body>
-
-  <div class="hero-gradient">
-    <div class="bg-pattern"></div>
-    <div class="container">
-      
-      <!-- Header -->
-      <header>
-        <h2 class="font-brand">Wellsty</h2>
-        <h1 class="font-display">A New Era of Style is Coming.</h1>
-        <p>We are crafting a collection that redefines elegance and empowers self-expression. The wait is almost over.</p>
-      </header>
-
-      <!-- Main Content -->
-      <main>
-        <!-- Email Subscription Form -->
-        <form id="subscribe-form" class="email-form">
-          <input id="email-input" type="email" class="email-input" placeholder="Enter your email" required>
-          <button type="submit" class="notify-button">Notify Me</button>
-        </form>
-
-        <!-- Gallery -->
-        <section class="gallery">
-          <h2>Get a Glimpse</h2>
-          <div class="gallery-grid">
-            <div class="gallery-item">
-              <img src="https://horizons-cdn.hostinger.com/21becedd-c12d-4145-b803-9c37c842543b/i2-Su2cb.jpg" alt="Chic urban fashion">
+    <header>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#categories">Shop</a>
+            <a href="#features">About</a>
+        </nav>
+        <div class="logo-container">
+           <img src="images/logo.png" alt="ShopsBuzz Logo" class="site-logo">
+            <div class="brand-name">ShopsBuzz</div>
+        </div>
+        <div class="header-icons">
+            <div class="search-wrapper" id="searchWrapper">
+                <i class="fas fa-search search-trigger" id="searchTrigger"></i>
+                <div class="search-expand" id="searchExpand">
+                    <input type="text" id="searchInput" placeholder="Search products..." autocomplete="off">
+                    <i class="fas fa-times search-close" id="searchClose"></i>
+                </div>
             </div>
-            <div class="gallery-item">
-              <img src="https://images.unsplash.com/photo-1658315125727-491deec051f5" alt="Luxurious fabric detail">
+            
+            <a href="#" class="icon-btn" id="userBtn"><i class="far fa-user"></i></a>
+            
+            <a href="#" class="icon-btn" id="cartBtn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </a>
+        </div>
+    </header>
+
+    <div id="modalsContainer"></div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Style Meets Convenience</h1>
+            <p>Explore our curated collection of premium fashion, timeless accessories, and daily essentials.</p>
+            <a href="#categories" class="cta-button">Start Shopping</a>
+        </div>
+    </section>
+
+    <section id="categories" class="categories-section">
+        <div class="section-header">
+            <h2>Shop by Category</h2>
+            <p>Find exactly what you need from our wide range of collections</p>
+        </div>
+
+        <div class="categories-grid">
+            <div class="category-card">
+                <div class="card-bg" style="background-image: url('images/fashion.avif'); background-color: #ddd;"></div>
+                <div class="card-overlay">
+                    <h3>Fashion</h3>
+                    <p>Trendsetting styles for every season.</p>
+                    <a href="fashion.html" class="card-link">View Collection <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
-            <div class="gallery-item">
-              <img src="https://horizons-cdn.hostinger.com/21becedd-c12d-4145-b803-9c37c842543b/i1-MYZcL.jpg" alt="Modern tailored suit">
+
+            <div class="category-card">
+                <div class="card-bg" style="background-image: url('images/accesories.avif'); background-color: #ddd;"></div>
+                <div class="card-overlay">
+                    <h3>Accessories</h3>
+                    <p>The perfect details to complete your look.</p>
+                    <a href="accessories.html" class="card-link">View Collection <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
-            <div class="gallery-item">
-              <img src="https://horizons-cdn.hostinger.com/21becedd-c12d-4145-b803-9c37c842543b/i3-y9UyT.jpg" alt="Artistic clothing silhouettes">
+
+            <div class="category-card">
+                <div class="card-bg" style="background-image: url('images/groceries.avif'); background-color: #ddd;"></div>
+                <div class="card-overlay">
+                    <h3>Groceries</h3>
+                    <p>Fresh, organic, and delivered fast.</p>
+                    <a href="groceries.html" class="card-link">View Collection <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
-          </div>
-        </section>
-      </main>
+        </div>
+    </section>
+    
+    <section id="features" class="features-section">
+        <div class="section-header">
+            <h2>Why Choose ShopsBuzz?</h2>
+            <p>Experience the difference with our commitment to quality and convenience.</p>
+        </div>
+        <div class="features">
+            <div class="feature-item">
+                <i class="fas fa-shipping-fast feature-icon"></i>
+                <h3>Fast Shipping</h3>
+                <p>Guaranteed 2-day delivery on all orders across the country.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-redo-alt feature-icon"></i>
+                <h3>Easy Returns</h3>
+                <p>Hassle-free 30-day return policy for ultimate peace of mind.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-life-ring feature-icon"></i>
+                <h3>24/7 Support</h3>
+                <p>Dedicated customer service available around the clock to help you.</p>
+            </div>
+        </div>
+    </section>
 
-      <!-- Footer -->
-      <footer>
-        <section class="socials">
-          <p>Follow Our Journey</p>
-          <div class="social-icons">
-            <a href="https://www.instagram.com/wellsty.in?igsh=N292bmFvOTZsMXN3&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://www.facebook.com/profile.php?id=61580731476595&mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a>
-            <a href="https://x.com/wellsty1236?s=21" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
-          </div>
-        </section>
-      </footer>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>ShopsBuss</h4>
+                <p>Your ultimate destination for lifestyle and essentials. We bring quality and style together.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/shops_buzz" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#categories">Shop</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="#">Tracking Order</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Coimbatore </li>
+                    <li><i class="fas fa-phone"></i> 9876543210 </li>
+                    <li><i class="fas fa-envelope"></i> shopsbuzz@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 ShopsBuzz. All rights reserved.
+        </div>
+    </footer>
 
-    </div>
-  </div>
-  
-  <!-- Notification Popup -->
-  <div id="notification-popup" class="notification"></div>
-
-  <!-- JavaScript -->
-  <script>
-    const subscribeForm = document.getElementById('subscribe-form');
-    const emailInput = document.getElementById('email-input');
-    const notificationPopup = document.getElementById('notification-popup');
-
-    function showNotification(message, isError = false) {
-      notificationPopup.textContent = message;
-      notificationPopup.classList.remove('error');
-      if (isError) {
-        notificationPopup.classList.add('error');
-      }
-      notificationPopup.classList.add('show');
-
-      setTimeout(() => {
-        notificationPopup.classList.remove('show');
-      }, 3000);
-    }
-
-    subscribeForm.addEventListener('submit', function(event) {
-      event.preventDefault();
-      const email = emailInput.value;
-
-      if (email && /^\S+@\S+\.\S+$/.test(email)) {
-        showNotification('Thank you! You are on the list.');
-        emailInput.value = '';
-      } else {
-        showNotification('Please enter a valid email address.', true);
-      }
-    });
-  </script>
-
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+    
+    <script>
+        fetch('common-modals.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('modalsContainer').innerHTML = html;
+                
+                // Manually re-initialize the handlers after the elements are in the DOM
+                setupModalHandlers();
+                setupAuthForms();
+            });
+    </script>
 </body>
 </html>
-
-
