@@ -1,0 +1,78 @@
+<!-- common-modals.html - Include this in all pages -->
+
+<!-- User/Login Modal -->
+<div id="userModal" class="modal">
+    <div class="modal-content user-modal-content">
+        <span class="close-modal" data-modal="userModal">&times;</span>
+        
+        <div class="auth-tabs">
+            <button class="auth-tab active" data-tab="login">Login</button>
+            <button class="auth-tab" data-tab="register">Register</button>
+        </div>
+
+        <div id="loginForm" class="auth-form active">
+            <h2>Welcome Back!</h2>
+            <form id="loginFormElement">
+                <div class="form-group">
+                    <label for="loginEmail"><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" id="loginEmail" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword"><i class="fas fa-lock"></i> Password</label>
+                    <input type="password" id="loginPassword" required placeholder="Enter your password">
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="auth-submit-btn">Login</button>
+            </form>
+        </div>
+
+        <div id="registerForm" class="auth-form">
+            <h2>Create Account</h2>
+            <form id="registerFormElement">
+                <div class="form-group">
+                    <label for="registerName"><i class="fas fa-user"></i> Full Name</label>
+                    <input type="text" id="registerName" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail"><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" id="registerEmail" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword"><i class="fas fa-lock"></i> Password</label>
+                    <input type="password" id="registerPassword" required placeholder="Create a password">
+                </div>
+                <div class="form-group">
+                    <label for="registerConfirmPassword"><i class="fas fa-lock"></i> Confirm Password</label>
+                    <input type="password" id="registerConfirmPassword" required placeholder="Confirm your password">
+                </div>
+                <button type="submit" class="auth-submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Cart Modal -->
+<div id="cartModal" class="modal">
+    <div class="modal-content cart-modal-content">
+        <span class="close-modal" data-modal="cartModal">&times;</span>
+        <h2><i class="fas fa-shopping-cart"></i> Shopping Cart</h2>
+        
+        <div id="cartItems" class="cart-items"></div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+    </div>
+</div>
+
+<!-- Search Results Dropdown (Inline) -->
+<div id="searchResults" class="search-results-dropdown"></div>
