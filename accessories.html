@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories | ShopsBuzz</title>
+    
+    <link rel="stylesheet" href="css/accessories.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            
+            <div class="nav-item">
+                <a href="#categories" class="menu-trigger">Accessories <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                
+                <div class="mega-menu">
+                    <div class="mega-menu-content">
+                        <div class="menu-column">
+                            <h3>Watches</h3>
+                            <ul>
+                                <li><a href="#">Analog & Digital</a></li>
+                                <li><a href="#">Smart Watches</a></li>
+                                <li><a href="#">Luxury Brands</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Jewelry</h3>
+                            <ul>
+                                <li><a href="#">Fine Necklaces</a></li>
+                                <li><a href="#">Diamond Rings</a></li>
+                                <li><a href="#">Earrings</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Bags</h3>
+                            <ul>
+                                <li><a href="#">Handbags</a></li>
+                                <li><a href="#">Backpacks</a></li>
+                                <li><a href="#">Wallets</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Eyewear</h3>
+                            <ul>
+                                <li><a href="#">Sunglasses</a></li>
+                                <li><a href="#">Blue Light</a></li>
+                                <li><a href="#">Frames</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">About</a>
+        </nav>
+
+        <div class="logo-container">
+            <img src="images/logo.png" alt="ShopsBuzz" class="site-logo"> 
+            <div class="brand-name">ShopsBuzz</div>
+        </div>
+
+        <div class="header-icons">
+            <a href="#" class="icon-btn"><i class="fas fa-search"></i></a>
+            <a href="#" class="icon-btn"><i class="far fa-user"></i></a>
+            <a href="#" class="icon-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="page-header slideshow-container">
+    
+        <div class="slideshow-images">
+            <div class="slide" style="background-image: url('images/slide1.jpeg');"></div>
+            <div class="slide" style="background-image: url('images/slide2.jpg');"></div>
+            <div class="slide" style="background-image: url('images/slide3.jpg');"></div>
+            <div class="slide" style="background-image: url('images/slide4.jpg');"></div>
+        </div>
+    
+        <div class="page-header-content">
+            <h1>Shop Accessories</h1>
+            <p>Discover the finishing touches for every outfit.</p>
+            <a href="#categories" class="cta-button">Start Shopping</a>
+        </div>
+    </section>
+
+    <section class="category-grid" id="categories">
+        
+        <a href="#" class="category-card card-watches" onclick="showNotification(event, 'Watches')">
+            <div class="card-content">
+                <h3>Watches</h3>
+                <span class="shop-now">Explore Collection &rarr;</span>
+            </div>
+        </a>
+
+        <a href="#" class="category-card card-jewelry" onclick="showNotification(event, 'Jewelry')">
+            <div class="card-content">
+                <h3>Jewelry</h3>
+                <span class="shop-now">Explore Collection &rarr;</span>
+            </div>
+        </a>
+
+        <a href="#" class="category-card card-bags" onclick="showNotification(event, 'Bags')">
+            <div class="card-content">
+                <h3>Bags & Wallets</h3>
+                <span class="shop-now">Explore Collection &rarr;</span>
+            </div>
+        </a>
+
+        <a href="#" class="category-card card-eyewear" onclick="showNotification(event, 'Eyewear')">
+            <div class="card-content">
+                <h3>Eyewear</h3>
+                <span class="shop-now">Explore Collection &rarr;</span>
+            </div>
+        </a>
+
+    </section>
+
+    <div id="toast-notification" class="toast-notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-message">Redirecting to collection...</span>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>ShopsBuzz</h4>
+                <p>Your ultimate destination for lifestyle and essentials. We bring quality and style together.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#categories">Shop</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="#">Tracking Order</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Coimbatore </li>
+                    <li><i class="fas fa-phone"></i> 9876543210 </li>
+                    <li><i class="fas fa-envelope"></i> shopsbuzz@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 ShopsBuzz. All rights reserved. Designed with <i class="fas fa-heart" style="color: #f72585;"></i>
+        </div>
+    </footer>
+
+    <script>
+    fetch('common-modals.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('modalsContainer').innerHTML = html;
+            
+            // ✅ CRITICAL FIX: Manually re-initialize handlers after HTML is loaded
+            setupModalHandlers();
+            setupAuthForms();
+        });
+</script>
+</body>
+</html>
